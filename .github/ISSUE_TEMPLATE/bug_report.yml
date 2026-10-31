@@ -1,0 +1,30 @@
+name: Wrong amount or bug
+description: The package gives a different amount from the Portal das Finanças, or fails.
+labels: [bug]
+body:
+  - type: textarea
+    id: input
+    attributes:
+      label: The vehicle
+      description: The object you passed to computeIuc (category, year and month of first registration, fuel, cc, CO2 and cycle).
+      render: ts
+    validations:
+      required: true
+  - type: input
+    id: got
+    attributes:
+      label: Amount from this package
+    validations:
+      required: true
+  - type: input
+    id: expected
+    attributes:
+      label: Amount from the Portal das Finanças
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Package version
+    validations:
+      required: true

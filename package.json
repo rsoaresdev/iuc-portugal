@@ -1,0 +1,74 @@
+{
+	"name": "iuc-portugal",
+	"version": "1.0.0",
+	"description": "Calculate the Portuguese IUC (Imposto \u00danico de Circula\u00e7\u00e3o) car and motorcycle tax for 2026, to the cent. Categories A, B and E, CO2 NEDC and WLTP, diesel surcharge, 2027 payment schedule. Zero dependencies.",
+	"keywords": [
+		"iuc",
+		"imposto unico de circulacao",
+		"imposto \u00fanico de circula\u00e7\u00e3o",
+		"portugal",
+		"car tax",
+		"vehicle tax",
+		"road tax",
+		"calculadora iuc",
+		"simulador iuc",
+		"autoridade tributaria",
+		"co2",
+		"wltp",
+		"nedc",
+		"automovel"
+	],
+	"homepage": "https://github.com/rsoaresdev/iuc-portugal#readme",
+	"bugs": "https://github.com/rsoaresdev/iuc-portugal/issues",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/rsoaresdev/iuc-portugal.git"
+	},
+	"license": "MIT",
+	"author": "Rafael Soares (https://github.com/rsoaresdev)",
+	"type": "module",
+	"sideEffects": false,
+	"exports": {
+		".": {
+			"import": {
+				"types": "./dist/index.d.ts",
+				"default": "./dist/index.js"
+			},
+			"require": {
+				"types": "./dist/index.d.cts",
+				"default": "./dist/index.cjs"
+			}
+		},
+		"./package.json": "./package.json"
+	},
+	"main": "./dist/index.cjs",
+	"types": "./dist/index.d.cts",
+	"files": [
+		"dist",
+		"src"
+	],
+	"engines": {
+		"node": ">=20"
+	},
+	"scripts": {
+		"build": "tsdown",
+		"typecheck": "tsc --noEmit",
+		"test": "vitest run",
+		"test:watch": "vitest",
+		"coverage": "vitest run --coverage",
+		"lint": "biome check .",
+		"format": "biome check --write .",
+		"prepublishOnly": "npm run lint && npm run typecheck && npm run coverage && npm run build && npm run check:package",
+		"check:package": "publint && attw --pack ."
+	},
+	"devDependencies": {
+		"@arethetypeswrong/cli": "^0.18.5",
+		"@biomejs/biome": "^2.6.4",
+		"@vitest/coverage-v8": "^5.0.5",
+		"publint": "^0.3.25",
+		"tsdown": "^0.23.4",
+		"typescript": "^6.0.3",
+		"vitest": "^5.0.5"
+	},
+	"module": "./dist/index.js"
+}
