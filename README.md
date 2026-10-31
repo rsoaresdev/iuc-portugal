@@ -1,5 +1,7 @@
 # iuc-portugal
 
+![iuc-portugal: calculadora do IUC ao cêntimo, com as tabelas de 2026](.github/assets/cover.png)
+
 [![npm](https://img.shields.io/npm/v/iuc-portugal.svg)](https://www.npmjs.com/package/iuc-portugal)
 [![CI](https://github.com/rsoaresdev/iuc-portugal/actions/workflows/ci.yml/badge.svg)](https://github.com/rsoaresdev/iuc-portugal/actions/workflows/ci.yml)
 [![bundle size](https://img.shields.io/bundlephobia/minzip/iuc-portugal)](https://bundlephobia.com/package/iuc-portugal)
