@@ -16,6 +16,8 @@ When a State Budget (Orçamento do Estado) changes a table:
 
 ## Development
 
+Development needs Node 22.18 or later (the build and test tools require it). The published package runs on Node 20 and later, which CI checks with `npm run smoke`.
+
 ```bash
 npm install
 npm run coverage
